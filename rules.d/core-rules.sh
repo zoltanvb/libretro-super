@@ -929,9 +929,9 @@ include_core_scummvm() {
 	register_module core "scummvm" -theos_ios -ngc -ps3 -psp1 -wii
 }
 libretro_scummvm_name="ScummVM"
-libretro_scummvm_git_url="https://github.com/libretro/scummvm.git"
+libretro_scummvm_git_url="https://github.com/scummvm/scummvm.git"
 libretro_scummvm_build_subdir="backends/platform/libretro"
-libretro_scummvm_build_args="SCUMMVM_PATH=\"${WORKDIR}/libretro-scummvm/\""
+libretro_scummvm_build_args="NO_WIP=0"
 
 include_core_kronos() {
 	register_module core "kronos" -theos_ios -ngc -ps3 -psp1 -qnx -wii
@@ -1518,7 +1518,7 @@ libretro_tic80_name="TIC-80"
 libretro_tic80_git_url="https://github.com/libretro/TIC-80.git"
 libretro_tic80_git_submodules="yes"
 libretro_tic80_build_subdir="core"
-libretro_tic80_build_extradir="lib/"
+libretro_tic80_build_extradir="bin/"
 libretro_tic80_build_rule="cmake"
 libretro_tic80_build_args="-DBUILD_PLAYER=OFF -DBUILD_SOKOL=OFF -DBUILD_SDL=OFF -DBUILD_DEMO_CARTS=OFF -DBUILD_LIBRETRO=ON -DBUILD_WITH_MRUBY=OFF -DCMAKE_BUILD_TYPE=Release"
 
